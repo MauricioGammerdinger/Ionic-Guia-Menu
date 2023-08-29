@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>CheckBox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-checkbox>Default</ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox disabled="true">Disabled</ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox checked="true">Checked</ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox disabled="true" checked="true">Checked + Disabled</ion-checkbox>
+  </ion-item>  
+
+  <ion-item>
+    <ion-label class="ion-text-center">Meses (Dinâmicos)</ion-label>
+  </ion-item>
+
+  <ion-item *ngFor="let mes of meses">
+    <ion-checkbox checked="{{mes.status}}" color="danger">{{mes.descricao}}</ion-checkbox>
+  </ion-item>
+</ion-content>
